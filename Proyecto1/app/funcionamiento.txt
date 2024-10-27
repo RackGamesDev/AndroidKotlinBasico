@@ -1,3 +1,4 @@
 una vez instalado anroid studio, se hace un proyecto con android 5 o superior
 los scripts se crean en app/kotlin+java/com.empresa.proyecto/ con la vista de android
 extension de archivos de kotlin: .kt
+se pueden hacer subpaquetes de codigo con click derecho > new > package, para organizarlo mas
