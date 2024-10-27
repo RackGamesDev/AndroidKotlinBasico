@@ -40,10 +40,6 @@ fun main() {
     texto = texto.toUpperCase() //a mayusculas o minusculas
     caracter = texto[2] //se refiere al tercer caracter
 
-    val nombres = arrayOf("asdf", "affadf", 3, arrayOf(1, 5)) //en kotlin los arrays tienen tamagno fijo pero su tipo puede cambiar (para que sean de un tipo se puede con intArrayOf, etc) (se declaran como constantes)
-    println(nombres[2]) //acceder a una posicion del array (tanto para lectura como escritura)
-    println(nombres.size) //int del tamagno del array (como .length)
-
     funcion()//llamar a una funcion
     procesar(4) //llamar a una funcion con parametro
     println(procesar(4)) //devolveria el valor procesado por la funcion, ya que tiene return
@@ -77,6 +73,48 @@ fun main() {
         2 -> "uno"
         else -> "no"
     }
+
+    while (false){ //bucle while
+
+    }
+    for (i in 0..10){ //bucle for, se necesita generar un array
+        println(i) //imprime del 0 al 10
+        break; //sale del bucle inmediatamente
+    }
+    for (i in 10 downTo 0 step 2){ //bucle que decrementa, y de 2 en 2
+        println(i)
+        continue; //salta a la siguiente iteracion
+    }
+    do { //bucle while que se ejecuta almenos una vez
+
+    } while (false)
+
+    val nombres = arrayOf("asdf", "affadf", 3, arrayOf(1, 5)) //en kotlin los arrays tienen tamagno fijo pero su tipo puede cambiar (para que sean de un tipo se puede con intArrayOf, etc) (se declaran como constantes)
+    println(nombres[2]) //acceder a una posicion del array (tanto para lectura como escritura)
+    println(nombres.size) //int del tamagno del array (como .length)
+    for (posicion in nombres.indices){ //recorrer array con un bucle
+        println(posicion) //el numero de posicion, desde el 0 hasta el .size
+        println(nombres[posicion]) //el valor de la posicion
+    }
+    for (nombre in nombres) {
+        println(nombre)
+    }
+
+    val listaFija:List<String> = listOf("asdf", "asdfa", "fasdf") //lista inmutable, en este caso funciona igual que un array pero de solo un tipo
+    println(listaFija.size)
+    println(listaFija) //en este caso si se imprime la lista
+    println(listaFija[1])
+    println(listaFija.last()) //devuelve el ultimo valor
+    println(listaFija.filter { it.contains("a") }) //devuelve una lista con los valores que cumplan la condicion
+    listaFija.forEach { elemento -> println(elemento) } //ejecutar algo por cada valor de la lista (se le puede cambiar el nombre a it)
+    var lista:MutableList<Int> = mutableListOf(1, 2, 3) //lista mutable, funciona igual pero el tamagno varia
+    lista.add(0, 33) //agnadir una posicion en otra especifica, las de mas adelante se desplazaran (si no se pone la posicion se agrega al final)
+    lista.removeAt(1) //eliminar una posicion
+    booleano = lista.isEmpty() //devuelve true si esta vacia
+    lista.sort() //ordenar la lista (si es string alfabeticamente, si es numeros de menor a mayor))
+    lista.clear() //elimina toda la lista
+
+
 }
 
 fun funcion() { //otra funcion distinta de la principal
