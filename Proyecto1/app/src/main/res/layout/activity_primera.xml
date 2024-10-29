@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--por defecto: androidx.constraintlayout.widget.ConstraintLayout-->
+<!--este xml es distinto del que se crea por defecto porque usa FrameLayout, que es mas sencillo-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PrimeraActivity">
+    <!--contenido del frame-->
+    <TextView
+        android:layout_width="183dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:text="hola"
+        android:textSize="22sp" />
+</FrameLayout>
