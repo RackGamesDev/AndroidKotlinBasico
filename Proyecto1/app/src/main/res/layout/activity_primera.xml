@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="183dp"
         android:layout_height="38dp"
-        android:layout_gravity="center"
+        android:layout_gravity="top|center"
         android:text="hola"
         android:textSize="22sp" />
 </FrameLayout>
