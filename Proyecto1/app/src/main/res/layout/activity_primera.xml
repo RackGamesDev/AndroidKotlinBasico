@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activities.PrimeraActivity">
     <!--el constraintlayout obliga a los elementos a estar enganchados a un layout o a este-->
     <!--contenido del layout-->
@@ -17,7 +18,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="183dp"
+        android:layout_height="38dp"
+        android:text="testo"
+        android:textSize="32sp"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintStart_toEndOf="@+id/view2" />
 
+    <Button
+        android:id="@+id/boton1"
+        android:layout_width="183dp"
+        android:layout_height="68dp"
+        android:text="testo"
+        android:textColor="@color/teal_200"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="286dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:layout_marginEnd="20dp"/>
     <View
         android:id="@+id/view2"
         android:layout_width="125dp"
@@ -32,11 +62,7 @@
         android:layout_height="38dp"
         android:text="hola"
         android:textSize="22sp" />
-    <TextView
-        android:layout_width="183dp"
-        android:layout_height="38dp"
-        android:text="hola"
-        android:textSize="22sp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

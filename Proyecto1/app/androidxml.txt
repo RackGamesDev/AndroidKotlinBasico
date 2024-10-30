@@ -7,3 +7,4 @@ elementos:
 FrameLayout, LinearLayout, ConstraintLayout (conener items)
 TextView: un label
 View: cuadro simple que puede tener color
+Button: boton simple parecido al texto

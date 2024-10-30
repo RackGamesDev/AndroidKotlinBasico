@@ -1,6 +1,8 @@
 package com.rack.proyecto1.activities
 
 import android.os.Bundle
+import android.widget.Button //clase necesaria para usar Button mas abajo
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,5 +19,9 @@ class PrimeraActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val boton1 = findViewById<Button>(R.id.boton1) //busca un elemento del xml de la vista para ponerlo en la variable, hace falta importar ese widget
+        val editText1 = findViewById<EditText>(R.id.editText1)
+
     }
 }
