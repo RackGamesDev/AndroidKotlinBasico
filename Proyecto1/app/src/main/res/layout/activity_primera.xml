@@ -9,7 +9,7 @@
     <!--el constraintlayout obliga a los elementos a estar enganchados a un layout o a este-->
     <!--contenido del layout-->
     <View
-        android:id="@+id/view"
+        android:id="@+id/view1"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:background="@color/black"
@@ -19,11 +19,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view2"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintEnd_toStartOf="@+id/view1" />
     <!--layouts secundarios (se pueden meter dentro de otros):
     //FrameLayout(posicionar segun gravedad de cada item), LinearLayout(posicionar segun orientacion del frame)
     <TextView
