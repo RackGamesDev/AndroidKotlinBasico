@@ -8,11 +8,14 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.rack.proyecto1.R
 
 class PrimeraActivity : AppCompatActivity() {
+    private var numero:Int = 0 //variable que se inicializa en el codigo de una vista, al estar en una clase deberia ser private
+    private lateinit var elementoCarta:CardView //variable que se inicializa cuando cargue la view
     override fun onCreate(savedInstanceState: Bundle?) { //funcion que se ejecuta al inicio (similar a main)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,19 +26,23 @@ class PrimeraActivity : AppCompatActivity() {
             insets
         }
 
+        initComponents() //llamara la funcion para inicializar las variables lateinit
         val boton1 = findViewById<Button>(R.id.boton1) //busca un elemento del xml de la vista para ponerlo en la variable, hace falta importar ese widget (todos los elementos que vallan a interactuar con el codigo deberian tener id)
         val editText1 = findViewById<EditText>(R.id.editText1)
         val texto1 = findViewById<TextView>(R.id.texto1)
+        print(R.color.gray) //lo mismo que meterse en app/res/values/cualquier xml y recoger un valor
         boton1.setOnClickListener { //se ejecuta cuando ocurra el evento de ese elemento
             val textoo = editText1.text.toString() //recibir el texto
-            if(textoo.isNotEmpty()){
+            if (textoo.isNotEmpty()) {
                 Log.i("boton1", "click  ${textoo}") //hacer print con logcat
                 texto1.text = textoo //cambiar el texto del elemento
                 val intent = Intent(this, SegundaPantalla::class.java) //declara un intent para pasar a otra pantalla
                 intent.putExtra("EXTRA_TEXTO", textoo) //poner una variable para que la pueda leer la otra pantalla
                 startActivity(intent) //ejecutar el intent para pasar a otra pantalla finalmente (si le das a atras vuelve)
             }
-
         }
+    }
+    private fun initComponents(){ //funcion para inicializar las variables lateinit cuando se cargue la vista (se podria hacer en la funcion onCreate)
+        elementoCarta = findViewById(R.id.card1) //inicializando cada variable lateinit
     }
 }
