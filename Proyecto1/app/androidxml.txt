@@ -9,3 +9,5 @@ FrameLayout, LinearLayout, ConstraintLayout (conener items)
 TextView: un label
 View: cuadro simple que puede tener color
 Button: boton simple parecido al texto
+CardView: como View pero con mas opciones, como el redondeo o sombras
+ImageView: para representar un svg ya importado
