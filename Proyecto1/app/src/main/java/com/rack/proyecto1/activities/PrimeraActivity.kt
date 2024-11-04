@@ -11,11 +11,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.slider.RangeSlider
 import com.rack.proyecto1.R
 
 class PrimeraActivity : AppCompatActivity() {
     private var numero:Int = 0 //variable que se inicializa en el codigo de una vista, al estar en una clase deberia ser private
     private lateinit var elementoCarta:CardView //variable que se inicializa cuando cargue la view
+    private lateinit var rango1: RangeSlider
     override fun onCreate(savedInstanceState: Bundle?) { //funcion que se ejecuta al inicio (similar a main)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,8 +43,12 @@ class PrimeraActivity : AppCompatActivity() {
                 startActivity(intent) //ejecutar el intent para pasar a otra pantalla finalmente (si le das a atras vuelve)
             }
         }
+        rango1.addOnChangeListener { slider, value, fromUser -> //listener con variables de entrada (en este caso cuando cambia el valor) (si una variable no se va a usar se cambia el nombre por _ )
+            texto1.text = value.toString()
+        }
     }
     private fun initComponents(){ //funcion para inicializar las variables lateinit cuando se cargue la vista (se podria hacer en la funcion onCreate)
         elementoCarta = findViewById(R.id.card1) //inicializando cada variable lateinit
+        rango1 = findViewById(R.id.rango1)
     }
 }

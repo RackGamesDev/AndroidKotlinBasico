@@ -1,6 +1,8 @@
 //basico del lenguaje kotlin/java
 package com.rack.proyecto1
 
+import android.icu.text.DecimalFormat
+
 val variableGlobal = 3 //variable/constante que funciona en todas las funciones
 
 //las funciones se declaran asi, main() es la principal
@@ -39,6 +41,8 @@ fun main() {
     texto = "aa $variableNumero" //otra forma de concatenar
     texto = texto.toUpperCase() //a mayusculas o minusculas
     caracter = texto[2] //se refiere al tercer caracter
+    val formato = DecimalFormat("#.##")
+    texto = formato.format(variableDecimal) //formatear con decimales
 
     funcion()//llamar a una funcion
     procesar(4) //llamar a una funcion con parametro
