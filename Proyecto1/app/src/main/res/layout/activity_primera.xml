@@ -35,6 +35,15 @@
             android:text="@string/app_name" />
     </androidx.cardview.widget.CardView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/teal_200"
+        android:src="@drawable/ic_android_black_24dp"
+        app:tint="@color/gray"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"

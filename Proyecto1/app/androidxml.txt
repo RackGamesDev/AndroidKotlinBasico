@@ -12,3 +12,4 @@ Button: boton simple parecido al texto
 CardView: como View pero con mas opciones, como el redondeo o sombras
 ImageView: para representar un svg ya importado
 RangeSlider: una barra para elegir un numero
+FloatingActionButton: boton redondo basico y sin texto (porque tiene un icono)
