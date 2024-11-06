@@ -1,6 +1,7 @@
 package com.rack.proyecto1.activities
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,10 @@ class SegundaPantalla : AppCompatActivity() {
 
         val resultado = findViewById<TextView>(R.id.resultado)
         val texto:String = intent.extras?.getString("EXTRA_TEXTO").orEmpty() //recibir la variable del intent teniendo cuidado con los nulos (ya viene creado)
+        val boton1:Button = findViewById<Button>(R.id.boton1)
+        boton1.setOnClickListener {
+            finish() //volver a la pantalla anterior
+        }
         resultado.text = texto
 
 

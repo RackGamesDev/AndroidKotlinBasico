@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.slider.RangeSlider
@@ -32,9 +33,10 @@ class PrimeraActivity : AppCompatActivity() {
         val boton1 = findViewById<Button>(R.id.boton1) //busca un elemento del xml de la vista para ponerlo en la variable, hace falta importar ese widget (todos los elementos que vallan a interactuar con el codigo deberian tener id)
         val editText1 = findViewById<EditText>(R.id.editText1)
         val texto1 = findViewById<TextView>(R.id.texto1)
-        print(R.color.gray) //lo mismo que meterse en app/res/values/cualquier xml y recoger un valor
+        print(R.color.gray) //lo mismo que meterse en app/res/values/cualquier xml y recoger un valor (por ejemplo tambien de strings.xml)
         boton1.setOnClickListener { //se ejecuta cuando ocurra el evento de ese elemento
             val textoo = editText1.text.toString() //recibir el texto
+            texto1.setTextColor(ContextCompat.getColor(this, R.color.gray)) //cambiar el color del texto, se pueden cambiar casi todas las propiedades de los componentes
             if (textoo.isNotEmpty()) {
                 Log.i("boton1", "click  ${textoo}") //hacer print con logcat
                 texto1.text = textoo //cambiar el texto del elemento

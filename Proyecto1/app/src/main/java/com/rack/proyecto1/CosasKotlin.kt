@@ -36,7 +36,7 @@ fun main() {
     variableNumero += 3 //autooperar
     println(1 + 1) //operando en funciones
     //las conversiones implicitas son igual que en java (ej: division con doubles)
-    variableNumero = variableDecimal.toInt() //conversion explicita
+    variableNumero = variableDecimal.toInt() //conversion explicita (se puede a casi cualquier tipo de variable)
     texto = variableNumero.toString() //se puede de casi cualquier tipo primitivo a otro
     texto = "aa $variableNumero" //otra forma de concatenar
     texto = texto.toUpperCase() //a mayusculas o minusculas
