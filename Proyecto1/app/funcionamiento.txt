@@ -6,5 +6,6 @@ se pueden hacer subpaquetes de codigo con click derecho > new > package, para or
 una activity es un conjunto de parte visual y parte logica (pantallas), para hacer una es en un paquete con new > activity > empty activity (al menos una tiene que ser launcher porque sera la primera)
 
 en /app/manifests/AndroidManifests.xml esta la informacion de la aplicacion y la primera activity
+    tambien se especifican las activitys secundarias y los temas, los temas son estilos por defecto para aplicar a las activitys (en res/values/themes)
 en app/res/values hay xmls con variables globales como colores y textos para usar en los scripts
 en app/res/drawable hay svg en formato xml para usar en la app (se pueden elegir predefinidos o .svg ya existente)

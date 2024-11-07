@@ -40,6 +40,7 @@ class PrimeraActivity : AppCompatActivity() {
             if (textoo.isNotEmpty()) {
                 Log.i("boton1", "click  ${textoo}") //hacer print con logcat
                 texto1.text = textoo //cambiar el texto del elemento
+            } else {
                 val intent = Intent(this, SegundaPantalla::class.java) //declara un intent para pasar a otra pantalla
                 intent.putExtra("EXTRA_TEXTO", textoo) //poner una variable para que la pueda leer la otra pantalla
                 startActivity(intent) //ejecutar el intent para pasar a otra pantalla finalmente (si le das a atras vuelve)
