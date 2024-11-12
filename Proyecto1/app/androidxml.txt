@@ -13,3 +13,4 @@ CardView: como View pero con mas opciones, como el redondeo o sombras
 ImageView: para representar un svg ya importado
 RangeSlider: una barra para elegir un numero
 FloatingActionButton: boton redondo basico y sin texto (porque tiene un icono)
+CheckBox: checkbox basico (se le agnade el evento como al boton y se sabe si esta checked con .isChecked)

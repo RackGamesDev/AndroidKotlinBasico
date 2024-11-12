@@ -26,7 +26,6 @@ class PrimeraActivity : AppCompatActivity() {
     private fun initComponents(){ //funcion para inicializar las variables lateinit cuando se cargue la vista (se podria hacer en la funcion onCreate)
         elementoCarta = findViewById(R.id.card1) //inicializando cada variable lateinit
         rango1 = findViewById(R.id.rango1)
-        recyclerView = findViewById(R.id.recycler1)
     }
 
 
@@ -60,6 +59,12 @@ class PrimeraActivity : AppCompatActivity() {
         rango1.addOnChangeListener { slider, value, fromUser -> //listener con variables de entrada (en este caso cuando cambia el valor) (si una variable no se va a usar se cambia el nombre por _ )
             texto1.text = value.toString()
         }
+        val boton3 = findViewById<Button>(R.id.boton3)
+        boton3.setOnClickListener {
+            val intent = Intent(this, DinamicoActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

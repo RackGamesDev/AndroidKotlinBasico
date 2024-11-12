@@ -24,4 +24,9 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/teal_200</item>
     </style>
+    <!--creando un estilo aplicable a componentes, se les aplica con style="@style/Nombre" en el elemento-->
+    <style name="TextoChulo">
+            <item name="android:textColor">@color/teal_200</item>
+            <item name="android:textSize">10sp</item>
+    </style>
 </resources>

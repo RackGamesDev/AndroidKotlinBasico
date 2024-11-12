@@ -118,7 +118,11 @@ fun main() {
     lista.sort() //ordenar la lista (si es string alfabeticamente, si es numeros de menor a mayor))
     lista.clear() //elimina toda la lista
 
-
+    try{
+        //si falla este codigo
+    }catch(e: Exception){
+        print(e.message) //entra aqui con el error localizado
+    }
 }
 
 fun funcion() { //otra funcion distinta de la principal
