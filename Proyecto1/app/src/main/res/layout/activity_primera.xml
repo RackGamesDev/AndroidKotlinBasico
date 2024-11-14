@@ -84,6 +84,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="aa"
         android:id="@+id/boton3"/>
+
+    <Button
+        android:id="@+id/boton4"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="dialogo"
+        app:layout_constraintBottom_toTopOf="@+id/boton3"
+        app:layout_constraintEnd_toEndOf="parent" />
     <EditText
         android:id="@+id/editText1"
         android:layout_width="286dp"
@@ -91,7 +99,8 @@
         android:layout_marginEnd="20dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="introduce texto"/>
 
     <com.google.android.material.slider.RangeSlider
         android:layout_width="match_parent"
@@ -112,6 +121,7 @@
         app:layout_constraintEnd_toStartOf="@+id/view1" />
 
     <TextView
+        android:id="@+id/textView"
         style="@style/TextoChulo"
         android:layout_width="100dp"
         android:layout_height="20dp"
@@ -125,6 +135,31 @@
         app:layout_constraintBottom_toTopOf="@+id/rango1"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/check1"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rango1"
+        app:layout_constraintStart_toStartOf="parent">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:checked="true"
+            android:text="asdf" />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="dsad" />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="fasdf" />
+    </RadioGroup>
+
     <!--layouts secundarios (se pueden meter dentro de otros):
     //FrameLayout(posicionar segun gravedad de cada item), LinearLayout(posicionar segun orientacion del frame)
     <TextView
