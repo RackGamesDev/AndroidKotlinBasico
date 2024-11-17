@@ -129,10 +129,7 @@ fun funcion() { //otra funcion distinta de la principal
     println("contenido" + variableGlobal.toString())
 }
 
-fun procesar(
-    parametro: Int,
-    otroParametro: Int = 2
-): Int { //funcion que recibe parametros (el :Int al final es para que pueda retornar un valor)
+fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe parametros (el :Int al final es para que pueda retornar un valor)
     println(parametro) //los parametros son constantes
     return parametro + otroParametro //devolver un valor (solo si la funcion era de un tipo (:Int))
     //a partir de aqui no se ejecuta nada
