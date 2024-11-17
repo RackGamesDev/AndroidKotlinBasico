@@ -5,5 +5,9 @@ fun main(){
     val b:Persona = Persona("nombre", 22, 2f) //instanciando una clase con su constructor secundario
     println(a.nombreMayusculas)
     println(b.altura) //accediendo a las propiedades de las clases (si son var se pueden modificar)
+    a.decirNombre()
 
+    val c:SubClaseHerencia = SubClaseHerencia(3, 4)
+    println("x" + c.tamagno)
+    c.sobreescribible()
 }
