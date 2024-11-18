@@ -39,10 +39,11 @@ fun main() {
     variableNumero = variableDecimal.toInt() //conversion explicita (se puede a casi cualquier tipo de variable)
     texto = variableNumero.toString() //se puede de casi cualquier tipo primitivo a otro
     texto = "aa $variableNumero" //otra forma de concatenar
-    texto = texto.toUpperCase() //a mayusculas o minusculas
+    texto = texto.uppercase() //a mayusculas o minusculas (hay muchas mas funciones para )
     caracter = texto[2] //se refiere al tercer caracter
-    val formato = DecimalFormat("#.##")
-    texto = formato.format(variableDecimal) //formatear con decimales
+    //val formato = DecimalFormat("#.##")
+    //texto = formato.format(variableDecimal) //formatear con decimales
+    texto = readln() //lee por consola (usado solo en kotlin en consola de comandos)
 
     funcion()//llamar a una funcion
     procesar(4) //llamar a una funcion con parametro
@@ -55,6 +56,10 @@ fun main() {
 
     } else {
 
+    }
+    if (variableNumero in 1..5){ //para saber si un numero esta en un rango
+    }
+    if (variableNumero is Int){ //para saber si una variable es de un tipo
     }
     when(variableNumero) { //switch case con una sola linea por cada opcion
         1 -> println("uno") //si ya entra en un caso no evalua el siguiente
@@ -109,7 +114,9 @@ fun main() {
     println(listaFija) //en este caso si se imprime la lista
     println(listaFija[1])
     println(listaFija.last()) //devuelve el ultimo valor
-    println(listaFija.filter { it.contains("a") }) //devuelve una lista con los valores que cumplan la condicion
+    listaFija.contains("asdf") //devuelve true si contiene el valor
+    listaFija.indexOf("asdf") //devuelve la posicion del valor
+    listaFija.filter { it.contains("a") }.forEach{println(it)} //devuelve una lista con los valores que cumplan la condicion
     listaFija.forEach { elemento -> println(elemento) } //ejecutar algo por cada valor de la lista (se le puede cambiar el nombre a it)
     var lista:MutableList<Int> = mutableListOf(1, 2, 3) //lista mutable, funciona igual pero el tamagno varia
     lista.add(0, 33) //agnadir una posicion en otra especifica, las de mas adelante se desplazaran (si no se pone la posicion se agrega al final)
