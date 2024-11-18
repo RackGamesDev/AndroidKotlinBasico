@@ -1,7 +1,7 @@
 //basico del lenguaje kotlin/java
 package com.rack.proyecto1
 
-import android.icu.text.DecimalFormat
+import android.icu.text.DecimalFormat //importar paquete externo
 
 val variableGlobal = 3 //variable/constante que funciona en todas las funciones
 
@@ -22,12 +22,16 @@ fun main() {
     var booleano: Boolean = true //true o false
     println(variableDouble) //print admite cualquier variable
     variableNumero = 3 //se puede cambiar el valor de var
+    println("aaa $variableNumero") //poniendo una variable en un string
+    println("aaa ${variableNumero + 1}") //poniendo expresiones en un string
     println(variableGlobal) //accediendo a una variable declarada fuera de la funcion
     var nula:String? = null //null representa ningun valor, para que una variable pueda ser nula neceista el ?
     println(nula?.toString() ?: "null") //solo hace eso en caso de no ser null, si es null hace lo otro (?:)
     //println(nula!!.toString()) //lo hace si o si, pero si es null crashea
 
+
     variableNumero = 3 + 2 - 4 * 6 / 8 % 2 //operaciones con variables
+    variable2 = variableNumero.also{variableNumero = variable2} //intercambiar dos variables
     texto = "asdf" + "asddf" //concatenacion de strings
     variableNumero += 2 //autooperar
     variableNumero++ //incrementar
@@ -77,7 +81,7 @@ fun main() {
         is String -> println("es un string")
         !is String -> println("no es un string")
     }
-    val resultadoWhen:String = when(variableNumero){ //guardando contenido en una variable usando when
+    val resultadoWhen:String = when(variableNumero){ //guardando contenido en una variable usando when porque when devuelve un valor
         1 -> "uno"
         2 -> "uno"
         else -> "no"
@@ -108,6 +112,8 @@ fun main() {
     for (nombre in nombres) {
         println(nombre)
     }
+    nombres.apply{fill("a")} //rellenar el array con un valor
+    //hay muchas mas funciones con los arrays
 
     val listaFija:List<String> = listOf("asdf", "asdfa", "fasdf") //lista inmutable, en este caso funciona igual que un array pero de solo un tipo
     println(listaFija.size)
@@ -116,20 +122,38 @@ fun main() {
     println(listaFija.last()) //devuelve el ultimo valor
     listaFija.contains("asdf") //devuelve true si contiene el valor
     listaFija.indexOf("asdf") //devuelve la posicion del valor
+    booleano = "asdf" in listaFija //devuelve true si contiene el valor
     listaFija.filter { it.contains("a") }.forEach{println(it)} //devuelve una lista con los valores que cumplan la condicion
     listaFija.forEach { elemento -> println(elemento) } //ejecutar algo por cada valor de la lista (se le puede cambiar el nombre a it)
+    //hay muchas mas funciones con las listas
+
     var lista:MutableList<Int> = mutableListOf(1, 2, 3) //lista mutable, funciona igual pero el tamagno varia
     lista.add(0, 33) //agnadir una posicion en otra especifica, las de mas adelante se desplazaran (si no se pone la posicion se agrega al final)
     lista.removeAt(1) //eliminar una posicion
     booleano = lista.isEmpty() //devuelve true si esta vacia
     lista.sort() //ordenar la lista (si es string alfabeticamente, si es numeros de menor a mayor))
     lista.clear() //elimina toda la lista
+    //hay muchas mas funciones con las listas mutables
+
+    var mapa = mapOf("a" to 1, "b" to true, 1 to "eeeee") //como una lista pero cada elemento se asocia con otro (tamagno fijo, .size)
+    println(mapa["a"])
+    println(mapa[1])
+    mapa.keys.forEach{println(it)} //array con todas las claves de los elementos
+    mapa.values.forEach{println(it)} //array con todos los elementos
+    //hay muchas mas funciones con los mapas
+
+    var elSet = setOf("a", "asdf", "dfasdf", "a") //parecido a un array pero sin elementos repetidos
+    //println(elSet.elementAt(3)) //este no estaria y daria error
 
     try{
         //si falla este codigo
+        throw IllegalArgumentException("error") //lanza un error personalizado
     }catch(e: Exception){
         print(e.message) //entra aqui con el error localizado
     }
+
+    var instanciaEstr:Estructura = Estructura //instanciando una estructura (struct), similar a una clase
+    instanciaEstr.nombre = "asdf" //tiene las propiedades ya declaradas de dicha estructura
 }
 
 fun funcion() { //otra funcion distinta de la principal
@@ -143,3 +167,8 @@ fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe
 }
 
 fun procesar2(a: Int, b: Int) = a - b //una funcion de solo una linea
+
+object Estructura{ //declarando una estructura para crear variables que tengan este contenido
+    var nombre = ""
+    var tamagno = 0
+}
