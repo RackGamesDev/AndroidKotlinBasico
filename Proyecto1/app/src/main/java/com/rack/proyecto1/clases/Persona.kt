@@ -1,11 +1,10 @@
 package com.rack.proyecto1.clases
 
-class Persona(nombre:String, edad:Int, opcional:Int = 3) { //creando una clase con un constructor (datos a especificar al declararla)
+class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //creando una clase con un constructor (datos a especificar al declararla)
     val nombreMayusculas = nombre.uppercase() //propiedad calculada
     @JvmField //modificador para cada propiedad, en este caso no haria nada pero hay muchos utiles en librerias y apis
     var altura:Float = 0f //propiedad no especificada en el constructor
     var nombre = ""
-    var edad = 0
     val apellido:String get() = "apellido" //propiedad que no se podra modificar pero se recoge con get()
     private val propiedadPrivada = 3 //propiedad que no se podra usar desde la instancia
     fun decirNombre(){ //funcion que se podra usar desde la instancia
@@ -38,3 +37,5 @@ class ImposibleCrear private constructor(){
 enum class Direccion{ //clase enumeradora que devuelve un tipo
     NORTE, SUR, ESTE, OESTE
 }
+
+class ErrorPersonalizado : Exception("error personalizado") //creando un error personalizado mediante una clase, se haria con throw ErrorPersonalizado()
