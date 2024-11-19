@@ -6,7 +6,12 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //creando una cla
     var altura:Float = 0f //propiedad no especificada en el constructor
     var nombre = ""
     val apellido:String get() = "apellido" //propiedad que no se podra modificar pero se recoge con get()
-    private val propiedadPrivada = 3 //propiedad que no se podra usar desde la instancia
+    private val propiedadPrivada = 3 //propiedad/metodo que no se podra usar desde la instancia
+    public var propiedadPublica = 3 //propiedad/metodo que se podra usar desde la instancia (no hace falta poner public)
+    public var propiedadMixta:Int = 1
+        private set //es publica pero el set para cambiarla no
+    internal val varInterna = 0 //propiedad/metodo que solo se puede usar en ese paquete
+
     fun decirNombre(){ //funcion que se podra usar desde la instancia
         println("nombre: " + this.nombre)
     }

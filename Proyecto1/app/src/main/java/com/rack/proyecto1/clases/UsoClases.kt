@@ -23,3 +23,5 @@ fun main(){
     println("x" + c.tamagno)
     c.sobreescribible()
 }
+
+val deInterfazFuncional = InterfazFuncional{!it} //usando una interfaz funcional (it es el dato de entrada)
