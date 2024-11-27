@@ -22,6 +22,16 @@ fun main(){
     val c:SubClaseHerencia = SubClaseHerencia(3, 4)
     println("x" + c.tamagno)
     c.sobreescribible()
+
+    val dt:ClaseData = ClaseData("asdf", 3)
+    println(dt.equals(ClaseData("asdf", 3))) //usando las funciones integradas de una data class
+    val (dtNombre, dtTamagno) = dt //extrayendo propiedades de una data class en base a su constructor
+
+    val subSealed:ClaseSealed.SubclaseSealed = ClaseSealed.SubclaseSealed() //instanciando una subclase de una clase sealed
 }
 
 val deInterfazFuncional = InterfazFuncional{!it} //usando una interfaz funcional (it es el dato de entrada)
+
+fun Persona.nueva(){} //se pueden declarar funciones nuevas para una clase, pero solo funciona en este archivo (aunque se pueden importar), tambien se pueden sobreescribir las que ya hay
+fun <T> MutableList<T>.funcionNuevaListas(): Int{return size} //esto es util para agnadir funcionalidad a las listas
+fun Persona.Companion.algoNuevo() {} //si la clase tiene companion object {} se puede hacer esto

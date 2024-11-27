@@ -11,6 +11,7 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //creando una cla
     public var propiedadMixta:Int = 1
         private set //es publica pero el set para cambiarla no
     internal val varInterna = 0 //propiedad/metodo que solo se puede usar en ese paquete
+    companion object {} //para agnadir funcionalidades en otros scirpts mas facil mente (mirar ejemplo UsoClases.kt)
 
     fun decirNombre(){ //funcion que se podra usar desde la instancia
         println("nombre: " + this.nombre)
@@ -42,5 +43,36 @@ class ImposibleCrear private constructor(){
 enum class Direccion{ //clase enumeradora que devuelve un tipo
     NORTE, SUR, ESTE, OESTE
 }
+enum class Colorr(val valor:Int){ROJO(0), VERDE(1), AZUL(2)} //cada uno devolveria un int     println(Colorr.ROJO.valor + 1)     println(Colorr.valueOf("ROJO"))
+//for (color in Colorr.entries) println(color.toString()) //imprime cada valor porque .entries es un array
 
 class ErrorPersonalizado : Exception("error personalizado") //creando un error personalizado mediante una clase, se haria con throw ErrorPersonalizado()
+
+class Combinado<T, U>(t: T, u: U){ //cada letra en <> sera una clase necesaria al instanciar la clase (cuentan como Any), las propiedades de esa intstancia podran ser de esas clses
+    var valor = t
+    var valor2 = u
+    operator fun get(indice: Int):T { //forma sencilla de hacer el get
+
+        if (indice == 0)
+            return valor
+        else
+            return valor2 as T //aqui estaria devolviendo otro tipo, por lo tanto haria un casting (o lo intentaria)
+
+    }
+    operator fun set(indice: Int, elQue1: T, elQue2: U){ //lo mismo con el set
+        valor = elQue1
+        valor2 = elQue2
+    }
+    fun <V>devolverASiMismo(que: V): V{ //lo mismo se puede hacer con las funciones
+        return que
+    } //ejemplo: devolverASiMismo<String>("asdf") devuelve "asdf":String
+} //ejemplo: var comb:Combinado<Int, String> = Combinado(3, "fasdd")
+
+class Fuera{
+    class Dentro{ //una clase dnetro de otra, similar a las sealed (pero funciona como static) (Fuera tambien podria ser una interfaz, y podria contener mas interfaces, aunque esta clase tambien podria contener interfaces)
+        fun funcion(){println("a")}
+    }
+    inner class Dentro2{ //igual pero ya no es static
+        fun funcion(){println("a")}
+    }
+} //val x = Fuera.Dentro().funcion()      val x = Fuera().Dentro2().funcion()

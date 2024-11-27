@@ -188,7 +188,7 @@ fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe
 
 fun procesar2(a: Int, b: Int) = a - b //una funcion de solo una linea
 
-object Estructura{ //declarando una estructura para crear variables que tengan este contenido
+object Estructura{ //declarando una estructura para crear variables que tengan este contenido, se suelen declarar tambien dentro de las clases
     var nombre = ""
     var tamagno = 0
 }
