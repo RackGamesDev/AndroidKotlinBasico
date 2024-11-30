@@ -65,10 +65,6 @@ fun main() {
     //texto = formato.format(variableDecimal) //formatear con decimales
     texto = readln() //lee por consola (usado solo en kotlin en consola de comandos)
 
-    funcion()//llamar a una funcion
-    procesar(4) //llamar a una funcion con parametro
-    println(procesar(4)) //devolveria el valor procesado por la funcion, ya que tiene return
-    println("aa \$${procesar(3, 4)} asdf") //ejecutar una funcion en un string porque devuelve texto (concatenacion)
 
     if (texto == "aa") { //if en kotlin (|| && !) (> < >= <= ==)
     } else if (booleano) {
@@ -149,7 +145,7 @@ fun main() {
     lista.clear() //elimina toda la lista
     //hay muchas mas funciones con las listas mutables
 
-    var mapa = mapOf("a" to 1, "b" to true, 1 to "eeeee") //como una lista pero cada elemento se asocia con otro (tamagno fijo, .size)
+    var mapa = mapOf("a" to 1, "b" to true, 1 to "eeeee") //como una lista pero cada elemento se asocia con otro (tamagno fijo, .size) (se podria llegar a usar para instanciar una clase)
     println(mapa["a"])
     println(mapa[1])
     mapa.keys.forEach{println(it)} //array con todas las claves de los elementos
@@ -169,15 +165,20 @@ fun main() {
         //codigo que se ejecuta haya error o no
     }
 
-    var instanciaEstr:Estructura = Estructura //instanciando una estructura (struct), similar a una clase
-    instanciaEstr.nombre = "asdf" //tiene las propiedades ya declaradas de dicha estructura
+    funcion()//llamar a una funcion
+    procesar(4) //llamar a una funcion con parametro
+    println(procesar(4)) //devolveria el valor procesado por la funcion, ya que tiene return
+    println("aa \$${procesar(3, 4)} asdf") //ejecutar una funcion en un string porque devuelve texto (concatenacion)
+    ejecutarParam({println("aa")}) //ejecutar una funcion como parametro
+    cualquierClase<Int, String>(2, "asdf") //llamando a una funcion que requiere una clase
+    var listafun:List<Int> = varios<Int>(2, 4, 4, 4, 4, 4) //llamando a una funcion con numero indeterminado de parametros
 }
 
-fun funcion() { //otra funcion distinta de la principal
+fun funcion() { //otra funcion distinta de la principal (por defecto devuelven el tipo de dato Unit, en ese caso cuenta como void y no hace falta un return)
     println("contenido" + variableGlobal.toString())
 }
 
-fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe parametros (el :Int al final es para que pueda retornar un valor)
+fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe parametros (el :Int al final es para que pueda retornar un valor) (si ya tienen un valor por defecto se pueden omitir)
     require(parametro > 0) { "error, debe ser mayor que 0" } //lanzar un error (similar a throw) si un argumento no es valido
     checkNotNull(parametro) {"error, no puede ser null"} //lanza un error si el argumento es null
 
@@ -185,10 +186,24 @@ fun procesar(parametro: Int, otroParametro: Int = 2): Int { //funcion que recibe
     return parametro + otroParametro //devolver un valor (solo si la funcion era de un tipo (:Int))
     //a partir de aqui no se ejecuta nada
 }
+fun procesar(){ //sobreescribir, en caso de que se llame a la funcion con otros parametros se ejecuta otro codigo
+    println("a")
+}
 
 fun procesar2(a: Int, b: Int) = a - b //una funcion de solo una linea
 
-object Estructura{ //declarando una estructura para crear variables que tengan este contenido, se suelen declarar tambien dentro de las clases
-    var nombre = ""
-    var tamagno = 0
+fun ejecutarParam(funcionParam: (num: Int) -> Unit){ //funcion que recibe una funcion como parametro
+    funcionParam(2)
+}
+
+fun <T, U> cualquierClase(variable:T, variable2:U){ //una funcion que necesita una clase para algo (T es esa clase y podria tener mas)
+    println(variable)
+    println(variable2)
+}
+
+fun <T> varios(num:Int, vararg items: T): List<T>{ //funcion que recibe numero indeterminado de parametros de x tipo (items seria un array)
+    val result = ArrayList<T>()
+    for (t in items) // ts is an Array
+        result.add(t)
+    return result
 }

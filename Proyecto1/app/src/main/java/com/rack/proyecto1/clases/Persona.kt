@@ -11,7 +11,7 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //creando una cla
     public var propiedadMixta:Int = 1
         private set //es publica pero el set para cambiarla no
     internal val varInterna = 0 //propiedad/metodo que solo se puede usar en ese paquete
-    companion object {} //para agnadir funcionalidades en otros scirpts mas facil mente (mirar ejemplo UsoClases.kt)
+    companion object {private val textoDefecto = "a"} //para agnadir funcionalidades en otros scirpts mas facil mente (mirar ejemplo UsoClases.kt)
 
     fun decirNombre(){ //funcion que se podra usar desde la instancia
         println("nombre: " + this.nombre)
@@ -52,12 +52,10 @@ class Combinado<T, U>(t: T, u: U){ //cada letra en <> sera una clase necesaria a
     var valor = t
     var valor2 = u
     operator fun get(indice: Int):T { //forma sencilla de hacer el get
-
         if (indice == 0)
             return valor
         else
             return valor2 as T //aqui estaria devolviendo otro tipo, por lo tanto haria un casting (o lo intentaria)
-
     }
     operator fun set(indice: Int, elQue1: T, elQue2: U){ //lo mismo con el set
         valor = elQue1
@@ -76,3 +74,20 @@ class Fuera{
         fun funcion(){println("a")}
     }
 } //val x = Fuera.Dentro().funcion()      val x = Fuera().Dentro2().funcion()
+
+@JvmInline
+value class Texto(private val s: String){
+    fun longitud(): Int {
+        return s.length
+    }
+} //cuando se hace una clase envoltorio (para dar funcionalidad extra a un valor) se aumenta el rendimiento poniendo value (clase inline)
+
+typealias Nombre = String //una forma de llamar a otra manera a las clases y funciones (util para aceder facilmente a ciertas clases)
+
+object Estructura{ //declarando una estructura para crear variables que tengan este contenido, se suelen declarar tambien dentro de las clases
+    var nombre = ""
+    var tamagno = 0
+    fun decirTodo(){println(nombre + tamagno)} //tambien pueden tener funciones
+    //viene con funciones por defecto como toString(), hashCode() y equals()
+}
+//tambien se podria hacer asi: val cosa = object {val nombre = "asdf"   override fun toString()=nombre} (similar a los objetos de javascript)
