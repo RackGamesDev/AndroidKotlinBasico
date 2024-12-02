@@ -1,10 +1,10 @@
-las vistas de las activity se guardan como xml en esta carpeta
-el elemento principal es el frame, y deberia ocupar toda la pantalla
+Las vistas de las activity se guardan como xml en esta carpeta
+El elemento principal es el frame, y deberia ocupar toda la pantalla
 android:layout_width="wrap_content" (ocupa lo que haga falta) "match_parent" (lo mismo que el superior, en este caso al maximo) "10dp" (unidad de medida)
-unidades de medida: dp=para pantallas sp=fuentes
-poniendo algo como tools: en lugar de android: hace que solo se vea asi en la preview
+Unidades de medida: dp=para pantallas sp=fuentes
+Poniendo algo como tools: en lugar de android: hace que solo se vea asi en la preview
 
-elementos (algunos vienen importados de librerias):
+Elementos (algunos vienen importados de librerias):
 FrameLayout, LinearLayout, ConstraintLayout (conener items)
 TextView: un label
 View: cuadro simple que puede tener color

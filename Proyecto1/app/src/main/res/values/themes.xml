@@ -13,8 +13,8 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <!--aqui se puede personalizar el estilo por defecto de los componentes (deriva de otro tema propio de android)-->
-    <!--creando otro estilo (sin actionbar)-->
+    <!--Aqui se puede personalizar el estilo por defecto de los componentes (deriva de otro tema propio de android)-->
+    <!--Creando otro estilo (sin actionbar)-->
     <style name="Theme.OtroTema" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -24,7 +24,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/teal_200</item>
     </style>
-    <!--creando un estilo aplicable a componentes, se les aplica con style="@style/Nombre" en el elemento-->
+    <!--Creando un estilo aplicable a componentes, se les aplica con style="@style/Nombre" en el elemento-->
     <style name="TextoChulo">
             <item name="android:textColor">@color/teal_200</item>
             <item name="android:textSize">10sp</item>

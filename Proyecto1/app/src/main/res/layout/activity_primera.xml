@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".activities.PrimeraActivity">
-    <!--el constraintlayout obliga a los elementos a estar enganchados a un layout o a este-->
-    <!--contenido del layout-->
+    <!--El constraintlayout obliga a los elementos a estar enganchados a un layout o a este-->
+    <!--Contenido del layout-->
     <View
         android:id="@+id/view1"
         android:layout_width="125dp"
@@ -160,7 +160,7 @@
             android:text="fasdf" />
     </RadioGroup>
 
-    <!--layouts secundarios (se pueden meter dentro de otros):
+    <!--Layouts secundarios (se pueden meter dentro de otros):
     //FrameLayout(posicionar segun gravedad de cada item), LinearLayout(posicionar segun orientacion del frame)
     <TextView
         android:layout_width="183dp"

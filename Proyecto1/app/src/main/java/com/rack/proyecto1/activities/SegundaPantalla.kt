@@ -24,7 +24,7 @@ class SegundaPantalla : AppCompatActivity() {
         }
 
         val resultado = findViewById<TextView>(R.id.resultado)
-        val texto:String = intent.extras?.getString("EXTRA_TEXTO").orEmpty() //recibir la variable del intent teniendo cuidado con los nulos (ya viene creado)
+        val texto:String = intent.extras?.getString("EXTRA_TEXTO").orEmpty() //Recibir la variable del intent teniendo cuidado con los nulos (ya viene creado)
         val boton1:Button = findViewById<Button>(R.id.boton1)
         boton1.setOnClickListener {
             finish() //volver a la pantalla anterior
