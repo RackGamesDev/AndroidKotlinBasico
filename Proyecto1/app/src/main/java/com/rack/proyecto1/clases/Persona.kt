@@ -14,7 +14,7 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //Creando una cla
     companion object {private val textoDefecto = "a"} //Para agnadir funcionalidades en otros scirpts mas facil mente (mirar ejemplo UsoClases.kt)
 
     fun decirNombre(){ //Funcion que se podra usar desde la instancia
-        println("nombre: " + this.nombre)
+        println("nombre: " + this.nombre) //this haria referencia a la clase (al objeto instanciado)
     }
     private fun oculto(){
         //Funcion que no se podra usar desde la instancia
@@ -72,6 +72,8 @@ class Fuera{
     }
     inner class Dentro2{ //Igual pero ya no es static
         fun funcion(){println("a")}
+        val thisDentroDos = this@Dentro2 //Haciendo que una variable valga lo mismo que el this de cierta clase
+        val thisFuera = this@Fuera
     }
 } //val x = Fuera.Dentro().funcion()      val x = Fuera().Dentro2().funcion()
 

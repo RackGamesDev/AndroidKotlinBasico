@@ -2,6 +2,7 @@
 package com.rack.proyecto1 //Indicar a que paquete pertenece el codigo (carpetas)
 
 import android.icu.text.DecimalFormat //Importar paquete externo
+import kotlinx.coroutines.delay
 import kotlin.random.Random
 
 val variableGlobal = 3 //Variable/constante que funciona en todas las funciones
@@ -28,10 +29,14 @@ fun main() {
     println("aaa $variableNumero") //Poniendo una variable en un string
     println("aaa ${variableNumero + 1}") //Poniendo expresiones en un string
     println(variableGlobal) //Accediendo a una variable declarada fuera de la funcion
+
+
     var nula:String? = null //null representa ningun valor, para que una variable pueda ser nula neceista el ? (si es nullable deja de ser un dato primitivo y se convierte en un puntero)
-    println(nula?.toString() ?: "null") //Solo hace eso en caso de no ser null, si es null hace lo otro (?:)
+    println(nula?.toString() ?: "null") //Solo hace eso en caso de no ser null, si es null hace lo otro (?:) (la parte del ?: "null" es opcional) (tambien se podria usar ?: throw Exception())
     variable2 = variableNumero ?: return //Si no es del tipo correcto sale de la funcion (en el main no tendria sentido)
-    //println(nula!!.toString()) //Lo hace si o si, pero si es null crashea
+    variable2 = variableNumero!! //Aunque sea una variable nullable, la trata como normal (y podria dar error)
+    nula?.let{println(it)} //Funcion lambda para nullables, si no es null ejecuta lo que este dentro
+    val puedeInt:Int? = variable3 as? Int //Intentando castear una variable tipo Any a Int, si falla devuelve null
 
 
     variableNumero = 3 + 2 - 4 * 6 / 8 % 2 //Operaciones con variables
@@ -66,6 +71,7 @@ fun main() {
 
 
     if (texto == "aa") { //if en kotlin (|| && !) (> < >= <= ==)
+        //== es para comparar si dos variables tienen el mismo contenido (como .equals()), en caso de ser un objeto se puede usar === para saber si referencian al mismo
     } else if (booleano) {
     } else {
     }
@@ -180,6 +186,7 @@ fun main() {
         b = a
         a //Labmda con varias lineas, la ultima es lo que va a devolver
     }
+
 }
 
 fun funcion() { //Otra funcion distinta de la principal (por defecto devuelven el tipo de dato Unit, en ese caso cuenta como void y no hace falta un return)
@@ -220,3 +227,17 @@ fun <T> varios(num:Int, vararg items: T): List<T>{ //Funcion que recibe numero i
 
 //Funcion hecha para funcionar como operador matematico (se hace despues que la suma y la resta) (1 sumar 2, x = 2  this = 1)
 infix fun Int.sumar(x: Int): Int {return x + this}
+
+fun llamar(){
+    launch {
+        val token = funcionTardia("aasd")
+        token
+    }
+
+}
+
+suspend fun funcionTardia(entrada: String): String{
+    delay(10000000)
+    return entrada
+}
+
