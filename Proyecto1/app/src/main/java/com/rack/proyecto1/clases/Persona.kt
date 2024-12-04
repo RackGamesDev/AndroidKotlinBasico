@@ -93,3 +93,6 @@ object Estructura{ //Declarando una estructura para crear variables que tengan e
     //Viene con funciones por defecto como toString(), hashCode() y equals()
 }
 //Tambien se podria hacer asi: val cosa = object {val nombre = "asdf"   override fun toString()=nombre} (similar a los objetos de javascript)
+
+@MustBeDocumented
+annotation class ClaseDecorada //Cuando se le van a poner anotaciones (@) a las clases se declaran como annotation, hay muchas y cada una tiene una funcion

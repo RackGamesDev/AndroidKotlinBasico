@@ -2,7 +2,7 @@
 package com.rack.proyecto1 //Indicar a que paquete pertenece el codigo (carpetas)
 
 import android.icu.text.DecimalFormat //Importar paquete externo
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.*
 import kotlin.random.Random
 
 val variableGlobal = 3 //Variable/constante que funciona en todas las funciones
@@ -139,6 +139,7 @@ fun main() {
     booleano = "asdf" in listaFija //Devuelve true si contiene el valor
     listaFija.filter { it.contains("a") }.forEach{println(it)} //Devuelve una lista con los valores que cumplan la condicion
     listaFija.forEach { elemento -> println(elemento) } //Ejecutar algo por cada valor de la lista (se le puede cambiar el nombre a it)
+    println(listOf(1, 2, 3).filter(::esPar)) //Esto se puede hacer con funciones declaradas de la misma manera
     //Hay muchas mas funciones con las listas
 
     var lista:MutableList<Int> = mutableListOf(1, 2, 3) //Lista mutable, funciona igual pero el tamagno varia
@@ -178,6 +179,10 @@ fun main() {
     var listafun:List<Int> = varios<Int>(2, 4, 4, 4, 4, 4) //Llamando a una funcion con numero indeterminado de parametros
     listafun = varios<Int>(2, *arrayOf(1,3,4)) //Pasando un array con todos los datos en su lugar
     println(1 sumar 2) //Llamando a una funcion infix
+    runBlocking { //Forma de llamar a una funcion asincrona que se ejecuta en un hilo aparte (por fuera del flujo principal) (se necesita llamar desde una corrutina y hay que importarlo)
+        val resultadoTarde = async { funcionTardia("asdf") } //La funcion debe estar declarada como suspend
+        println(resultadoTarde.await())
+    }
 
     val resultadoL: (Int, Int) -> Int = {a, b -> a + b} //Declarando una funcion lambda, devuelve lo que devuelva la expresion (se puede usar como entrada para funciones que pidan funciones)
     println(resultadoL(2, 3)) //Llamando a una funcion lambda
@@ -208,6 +213,7 @@ fun procesar(){ //Sobreescribir, en caso de que se llame a la funcion con otros 
 
 inline fun procesar2(a: Int, b: Int) = a - b //Una funcion de solo una linea (en estos casos puede ser mas optimo para el rendimiento poner inline, pero es opcional)
 inline fun procesar3(a: Int, noinline funParam: () -> Unit) = a //El noinline hace que la funcion por parametros no se compile como inline (poner crossinline haria que si fuese lambda no se ejecutase desde los parametros)
+fun esPar(x: Int) = x % 2 != 0 //Tambien se puede hacer asi
 
 fun ejecutarParam(funcionParam: (num: Int) -> Unit){ //Funcion que recibe una funcion como parametro
     funcionParam(2)
@@ -228,16 +234,8 @@ fun <T> varios(num:Int, vararg items: T): List<T>{ //Funcion que recibe numero i
 //Funcion hecha para funcionar como operador matematico (se hace despues que la suma y la resta) (1 sumar 2, x = 2  this = 1)
 infix fun Int.sumar(x: Int): Int {return x + this}
 
-fun llamar(){
-    launch {
-        val token = funcionTardia("aasd")
-        token
-    }
-
-}
-
-suspend fun funcionTardia(entrada: String): String{
-    delay(10000000)
+suspend fun funcionTardia(entrada: String): String{ //Funcion asincrona que puede ser llamada desde una corrutina para que funcione con un flujo alternativo al programa
+    delay(10000) //Esperar
     return entrada
 }
 

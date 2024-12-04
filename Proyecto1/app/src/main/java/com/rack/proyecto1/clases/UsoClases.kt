@@ -11,6 +11,7 @@ fun main(){
     println(a === b) //Comprobaria si apuntan al mismo objeto o no
     //a = b //No haria que ambas variables tengan el mismo contenido sino que apuntaran al mismo objeto (como en java)
 
+
     with(a){ //Ejecutando funciones y accediendo a propiedades como si estuviese dentro de la clase
         println(nombre)
         println(edad)
