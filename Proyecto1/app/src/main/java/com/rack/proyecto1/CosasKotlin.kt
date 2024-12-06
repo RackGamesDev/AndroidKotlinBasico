@@ -15,7 +15,7 @@ fun main() {
     val constante = "aa" //Igual que var pero no se puede cambiar
     var variable = "asdf" //Variable de cualquier tipo (solo funcionaria en esta funcion) (tienen que tener valor asignado desde el principio)
     var variable2 = 34
-    var variable3:Any = false //Lo mismo que ponerle tipo Any
+    var variable3:Any = false //Lo mismo que ponerle tipo Any, tambien puede ser de :dynamic
     //Al declarar variables de un tipo primitivo se puede poner una u (UInt, UShort) que hacen que puedan ser nulas y se inicializan con: 3432u
     var variableNumero: Int = 5 //Esta solo admitiria enteros (Int, Long, Short, Byte)
     var variableDecimal: Float = 5.4f //Lo mismo pero con decimales (Float, Double)
@@ -104,7 +104,7 @@ fun main() {
 
     while (false){ //Bucle while
     }
-    for (i in 0..10){ //Bucle for, se necesita generar un array
+    for (i in 0..10){ //Bucle for, se necesita generar un array (tambien podria ser 'a'..'z' para rangos con char)
         println(i) //Imprime del 0 al 10
         break; //Sale del bucle inmediatamente
     }
@@ -160,6 +160,8 @@ fun main() {
     var elSet = setOf("a", "asdf", "dfasdf", "a") //Parecido a un array pero sin elementos repetidos
     //println(elSet.elementAt(3)) //Este no estaria y daria error
 
+    //Hay muchos mas tipos de colecciones e incluso se podrian crear nuevas
+
     try{
         //Si falla este codigo (al igual que los ifs tambien podria devolver algo con x = try{...})
         throw IllegalArgumentException("error") //Lanza un error personalizado (se pueden lanzar en cualquier momento)
@@ -191,7 +193,6 @@ fun main() {
         b = a
         a //Labmda con varias lineas, la ultima es lo que va a devolver
     }
-
 }
 
 fun funcion() { //Otra funcion distinta de la principal (por defecto devuelven el tipo de dato Unit, en ese caso cuenta como void y no hace falta un return)
@@ -217,6 +218,9 @@ fun esPar(x: Int) = x % 2 != 0 //Tambien se puede hacer asi
 
 fun ejecutarParam(funcionParam: (num: Int) -> Unit){ //Funcion que recibe una funcion como parametro
     funcionParam(2)
+}// Se ejecutaria asi: ejecutarParam(::funcion(3))
+fun devuelveFuncion(): (num: Int, num2: Int) -> Int{
+    return ::procesar //Devolviendo una funcion con las mismas entradas y salidas
 }
 
 fun <T, U> cualquierClase(variable:T, variable2:U){ //Una funcion que necesita una clase para algo (T es esa clase y podria tener mas)
@@ -231,8 +235,10 @@ fun <T> varios(num:Int, vararg items: T): List<T>{ //Funcion que recibe numero i
     return result
 }
 
-//Funcion hecha para funcionar como operador matematico (se hace despues que la suma y la resta) (1 sumar 2, x = 2  this = 1)
+//Funcion hecha para funcionar como operador matematico (se hace despues que la suma y la resta) (1 sumar 2, x = 2  this = 1) (se hace sobre una clase ya existente)
 infix fun Int.sumar(x: Int): Int {return x + this}
+//Similar a infix pero para sobreescribir operadores (hacer 2 + "hola" seria 6 ya que Int.plus es +)
+operator fun Int.plus(str: String) = this + str.length
 
 suspend fun funcionTardia(entrada: String): String{ //Funcion asincrona que puede ser llamada desde una corrutina para que funcione con un flujo alternativo al programa
     delay(10000) //Esperar

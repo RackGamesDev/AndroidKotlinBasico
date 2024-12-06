@@ -11,7 +11,10 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //Creando una cla
     public var propiedadMixta:Int = 1
         private set //Es publica pero el set para cambiarla no
     internal val varInterna = 0 //Propiedad/metodo que solo se puede usar en ese paquete
-    companion object {private val textoDefecto = "a"} //Para agnadir funcionalidades en otros scirpts mas facil mente (mirar ejemplo UsoClases.kt)
+    companion object Compa { //Para agnadir funciones y constantes estaticas en clases normales
+        private val textoDefecto = "a"
+        fun estatica(){println("a")} //Actuaria similar a una funcion estatica
+    }
 
     fun decirNombre(){ //Funcion que se podra usar desde la instancia
         println("nombre: " + this.nombre) //this haria referencia a la clase (al objeto instanciado)
@@ -35,6 +38,11 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //Creando una cla
         this.edad = edad
     }
 }
+
+//Las data class vienen ademas con funciones como equals()/hashCode(), toString(), copy(), componentN() pero el constructor no puede estar vacio
+data class ClaseData(var nombre:String, var tamagno:Int) { //Solo las funciones integradas funcionan con las propiedades del constructor (no pueden ser abstarct, open, sealed, inner)
+    var posicion:Float = 3f;
+} //Las data class tambien tienen propiedades llamadas component1, component2, etc. que hacen referencia a las propiedades en ese orden
 
 class ImposibleCrear private constructor(){
     //No se puede crear una instancia de esta clase, util para herencias

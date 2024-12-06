@@ -1,4 +1,5 @@
 package com.rack.proyecto1.clases
+//Las clases sealed solo pueden ser heredadas dentro del mismo archivo
 
 //Las interfaces suelen ser sealed
 sealed interface Interfaz {
@@ -6,7 +7,7 @@ sealed interface Interfaz {
     val valor:Int
 }
 
-sealed class ClaseSealed(val nombre:String) : Interfaz { //Las sealed class no pueden ser instanciadas pero tienen varias clases dentro que si
+sealed class ClaseSealed(val nombre:String) : Interfaz { //Suelen tener aveces vairas clases dentro
     class SubclaseSealed: ClaseSealed("asdf"){
         override fun funcion() { //Las subclases de la sealed class deben cumplir las obligaciones de la interfaz
         }
