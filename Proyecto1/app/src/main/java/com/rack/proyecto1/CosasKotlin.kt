@@ -116,8 +116,10 @@ fun main() {
 
     } while (false)
 
-    val nombres = arrayOf("asdf", "affadf", 3, arrayOf(1, 5)) //En kotlin los arrays tienen tamagno fijo pero su tipo puede cambiar (para que sean de un tipo se puede con intArrayOf, etc) (se declaran como constantes)
+    val nombres = arrayOf("asdf", "affadf", 3, arrayOf(1, 5)) //En kotlin los arrays tienen tamagno fijo pero su tipo puede cambiar (para que sean de un tipo se puede con intArrayOf, etc) (se declaran como constantes pero su contenido puede variar)
+    //nombres = arrayOf("a", "b") //No se puede reasignar porque es val y no var
     println(nombres[2]) //Acceder a una posicion del array (tanto para lectura como escritura)
+    nombres[2] = "asdf"
     println(nombres.size) //int del tamagno del array (como .length)
     for (posicion in nombres.indices){ //Recorrer array con un bucle
         println(posicion) //El numero de posicion, desde el 0 hasta el .size
@@ -129,7 +131,7 @@ fun main() {
     nombres.apply{fill("a")} //Rellenar el array con un valor
     //Hay muchas mas funciones con los arrays
 
-    val listaFija:List<String> = listOf("asdf", "asdfa", "fasdf") //Lista inmutable, en este caso funciona igual que un array pero de solo un tipo
+    val listaFija:List<String> = listOf("asdf", "asdfa", "fasdf") //Lista inmutable, en este caso funciona igual que un array pero de solo un tipo (su contenido no puede variar)
     println(listaFija.size)
     println(listaFija) //En este caso si se imprime la lista
     println(listaFija[1])
@@ -142,7 +144,8 @@ fun main() {
     println(listOf(1, 2, 3).filter(::esPar)) //Esto se puede hacer con funciones declaradas de la misma manera
     //Hay muchas mas funciones con las listas
 
-    var lista:MutableList<Int> = mutableListOf(1, 2, 3) //Lista mutable, funciona igual pero el tamagno varia
+    var lista:MutableList<Int> = mutableListOf(1, 2, 3) //Lista mutable, funciona igual pero el tamagno varia y su contenido tambien
+    lista[1] = 2;
     lista.add(0, 33) //Agnadir una posicion en otra especifica, las de mas adelante se desplazaran (si no se pone la posicion se agrega al final)
     lista.removeAt(1) //Eliminar una posicion
     booleano = lista.isEmpty() //Devuelve true si esta vacia
