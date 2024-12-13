@@ -44,7 +44,7 @@ class PrimeraActivity : AppCompatActivity() {
         initComponents() //Llamara la funcion para inicializar las variables lateinit
 
         val boton1: Button = findViewById<Button>(R.id.boton1) //Busca un elemento del xml de la vista para ponerlo en la variable, hace falta importar ese widget (todos los elementos que vallan a interactuar con el codigo deberian tener id)
-    val editText1 = findViewById<EditText>(R.id.editText1)
+        val editText1 = findViewById<EditText>(R.id.editText1)
         val texto1 = findViewById<TextView>(R.id.texto1)
         print(R.color.gray) //Lo mismo que meterse en app/res/values/cualquier xml y recoger un valor (por ejemplo tambien de strings.xml)
 
