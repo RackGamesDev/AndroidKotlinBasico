@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.rack.funcionamientorecyclerview.CocheRecyclerView.Coche
 import com.rack.funcionamientorecyclerview.R
 
@@ -14,9 +15,10 @@ class CocheHolder(view: View): RecyclerView.ViewHolder(view) {
     val cocheImg = view.findViewById<ImageView>(R.id.imgCoche)
 
     fun render(cocheModel: Coche){
+        //Moldear el view (que es un xml aparte segun ese item)
         cocheNombre.text = cocheModel.nombre
         cocheDescripcion.text = cocheModel.descripcion
         cochePrecio.text = cocheModel.precio.toString()
-
+        Glide.with(cocheImg.context).load(cocheModel.foto).into(cocheImg)
     }
 }

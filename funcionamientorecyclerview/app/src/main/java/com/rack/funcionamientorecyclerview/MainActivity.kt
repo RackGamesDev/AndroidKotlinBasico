@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
     }
 
-    private fun initRecyclerView(){
+    private fun initRecyclerView(){ //Inicializa el recycler view
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerCoches)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CocheAdapter(CocheProvider.listaCoches)

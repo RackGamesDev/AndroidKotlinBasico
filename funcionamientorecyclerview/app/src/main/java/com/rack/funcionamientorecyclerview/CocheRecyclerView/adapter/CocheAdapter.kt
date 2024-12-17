@@ -14,7 +14,7 @@ class CocheAdapter(private val listaCoches:List<Coche>): RecyclerView.Adapter<Co
 
     override fun getItemCount(): Int = listaCoches.size //Funcion que devuelve el tamagno de la lista
 
-    override fun onBindViewHolder(holder: CocheHolder, position: Int) {
+    override fun onBindViewHolder(holder: CocheHolder, position: Int) { //Se ejecuta por cada item impreso
         val item = listaCoches[position]
         holder.render(item)
     }
