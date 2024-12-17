@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding {
+        true
+    }
 }
 
 dependencies {
@@ -47,8 +51,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.glide)
 }
-dependencies {
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+//dependencies {
+    //implementation("com.github.bumptech.glide:glide:4.16.0")
     //kapt("com.github.bumptech.glide:compiler:4.16.0")
-}
+//}
 
