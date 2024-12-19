@@ -160,6 +160,15 @@
             android:text="fasdf" />
     </RadioGroup>
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/busqueda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton1" />
+
     <!--Layouts secundarios (se pueden meter dentro de otros):
     //FrameLayout(posicionar segun gravedad de cada item), LinearLayout(posicionar segun orientacion del frame)
     <TextView

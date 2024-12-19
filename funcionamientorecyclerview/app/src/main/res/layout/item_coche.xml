@@ -32,11 +32,19 @@
         tools:text="0000"
         android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/descripcionCoche"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/imgCoche"
-            app:layout_constraintTop_toBottomOf="@+id/nombreCoche"
-            tools:text="asdfasdfasdfasdfsadf" />
+    <TextView
+        android:id="@+id/descripcionCoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgCoche"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCoche"
+        tools:text="asdfasdfasdfasdfsadf" />
+
+    <Button
+        android:id="@+id/botonVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="ver"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

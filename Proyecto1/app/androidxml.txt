@@ -3,6 +3,7 @@ El elemento principal es el frame, y deberia ocupar toda la pantalla
 android:layout_width="wrap_content" (ocupa lo que haga falta) "match_parent" (lo mismo que el superior, en este caso al maximo) "10dp" (unidad de medida)
 Unidades de medida: dp=para pantallas sp=fuentes
 Poniendo algo como tools: en lugar de android: hace que solo se vea asi en la preview
+Para agregar librerias externas (como retrofit) hay que agregarlas en libs.versions.toml y luego en build.gradle.kts(Module:app) y luego recargar el proyecto y sincronizar gradle
 
 Elementos (algunos vienen importados de librerias):
 FrameLayout, LinearLayout, ConstraintLayout (conener items)
@@ -15,3 +16,4 @@ RangeSlider: una barra para elegir un numero
 FloatingActionButton: boton redondo basico y sin texto (porque tiene un icono)
 CheckBox: checkbox basico (se le agnade el evento como al boton y se sabe si esta checked con .isChecked)
 RadioGroup: contiene los RadioButton que tienen propiedades muy parecidas a CheckBox pero solo se puede seleccionar 1
+SearchView: tipico para introducir texto y buscar

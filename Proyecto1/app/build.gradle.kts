@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding { //Activar esto para tener el binding
+        enable = true
+    }
 }
 
 dependencies {
@@ -42,6 +46,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.retrofit) //Importar retrofit2 para el consumo de apis y la transformacion de json
+    implementation(libs.retrofitconverter) //Importar retrofit2 para el consumo de apis y la transformacion de json)
+    implementation(libs.retrofitconvertergson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

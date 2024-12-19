@@ -8,7 +8,9 @@ import android.widget.Button //clase necesaria para usar Button mas abajo
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.appcompat.widget.SearchView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -43,10 +45,14 @@ class PrimeraActivity : AppCompatActivity() {
         }
         initComponents() //Llamara la funcion para inicializar las variables lateinit
 
+
+
         val boton1: Button = findViewById<Button>(R.id.boton1) //Busca un elemento del xml de la vista para ponerlo en la variable, hace falta importar ese widget (todos los elementos que vallan a interactuar con el codigo deberian tener id)
         val editText1 = findViewById<EditText>(R.id.editText1)
         val texto1 = findViewById<TextView>(R.id.texto1)
         print(R.color.gray) //Lo mismo que meterse en app/res/values/cualquier xml y recoger un valor (por ejemplo tambien de strings.xml)
+
+        Toast.makeText(texto1.context, "mensaje", Toast.LENGTH_SHORT).show() //Mostrar un mensaje emergente, necesita el contexto de algun item en la view
 
         boton1.setOnClickListener { //Se ejecuta cuando ocurra el evento de ese elemento
             val textoo = editText1.text.toString() //Recibir el texto
@@ -54,6 +60,11 @@ class PrimeraActivity : AppCompatActivity() {
             if (textoo.isNotEmpty()) {
                 Log.i("boton1", "click  ${textoo}") //Hacer print con logcat
                 texto1.text = textoo //Cambiar el texto del elemento
+                if (textoo == "a"){
+                    startActivity(Intent(this, ConBindingActivity::class.java))
+                } else if(textoo == "b"){
+                    startActivity(Intent(this, UsoRetrofitActivity::class.java))
+                }
             } else {
                 val intent = Intent(this, SegundaPantalla::class.java) //Declara un intent para pasar a otra pantalla
                 intent.putExtra("EXTRA_TEXTO", textoo) //Poner una variable para que la pueda leer la otra pantalla
@@ -64,6 +75,16 @@ class PrimeraActivity : AppCompatActivity() {
         rango1.addOnChangeListener { slider, value, fromUser -> //Listener con variables de entrada (en este caso cuando cambia el valor) (si una variable no se va a usar se cambia el nombre por _ )
             texto1.text = value.toString()
         }
+        findViewById<SearchView>(R.id.busqueda).setOnQueryTextListener(object : SearchView.OnQueryTextListener { //Para saber cuando se busco con SearchView se hace asi
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                println("se busca $query")
+                return false
+            }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                println("se actualiza el texto")
+                return false
+            }
+        })
 
         val radios: RadioGroup = findViewById(R.id.radioGroup1)
         val radioSeleccoinado: RadioButton = findViewById(radios.checkedRadioButtonId) //Saber el id del radio seleccionado

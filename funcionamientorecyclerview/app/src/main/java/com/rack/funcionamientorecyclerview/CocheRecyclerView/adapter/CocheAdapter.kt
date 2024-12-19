@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rack.funcionamientorecyclerview.CocheRecyclerView.Coche
 import com.rack.funcionamientorecyclerview.R
 
-class CocheAdapter(private val listaCoches:List<Coche>): RecyclerView.Adapter<CocheHolder>() {
+class CocheAdapter(private val listaCoches:List<Coche>, private val onClickListener:(Coche) -> Unit): RecyclerView.Adapter<CocheHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CocheHolder {
         val layoutInflater = LayoutInflater.from(parent.context) //Inflater que crea la vista de ese item
         return CocheHolder(layoutInflater.inflate(R.layout.item_coche, parent, false))
@@ -16,6 +16,6 @@ class CocheAdapter(private val listaCoches:List<Coche>): RecyclerView.Adapter<Co
 
     override fun onBindViewHolder(holder: CocheHolder, position: Int) { //Se ejecuta por cada item impreso
         val item = listaCoches[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 }
