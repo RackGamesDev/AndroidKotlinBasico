@@ -20,6 +20,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.slider.RangeSlider
 import com.rack.proyecto1.R
+import com.rack.proyecto1.consumoApi.UsoRetrofitActivity
 
 class PrimeraActivity : AppCompatActivity() {
 

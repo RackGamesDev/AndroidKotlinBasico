@@ -9,6 +9,7 @@ Elementos (algunos vienen importados de librerias):
 FrameLayout, LinearLayout, ConstraintLayout (conener items)
 TextView: un label
 View: cuadro simple que puede tener color
+EditText: un lugar para introducir texto
 Button: boton simple parecido al texto
 CardView: como View pero con mas opciones, como el redondeo o sombras
 ImageView: para representar un svg ya importado
@@ -17,3 +18,4 @@ FloatingActionButton: boton redondo basico y sin texto (porque tiene un icono)
 CheckBox: checkbox basico (se le agnade el evento como al boton y se sabe si esta checked con .isChecked)
 RadioGroup: contiene los RadioButton que tienen propiedades muy parecidas a CheckBox pero solo se puede seleccionar 1
 SearchView: tipico para introducir texto y buscar
+ProgressBar: circulo de carga de google que puede estar visible, no estarlo o directamente desaparecer

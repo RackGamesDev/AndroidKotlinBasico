@@ -46,10 +46,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.retrofit) //Importar retrofit2 para el consumo de apis y la transformacion de json
-    implementation(libs.retrofitconverter) //Importar retrofit2 para el consumo de apis y la transformacion de json)
-    implementation(libs.retrofitconvertergson)
+    //implementation(libs.retrofit) //Importar retrofit2 para el consumo de apis y la transformacion de json
+    //implementation(libs.retrofitconverter) //Importar retrofit2 para el consumo de apis y la transformacion de json)
+    //implementation(libs.retrofitconvertergson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.squareup.retrofit2:retrofit:2.11.0") // Retrofit 9
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0") // Gson Converter 9
 }

@@ -2,6 +2,7 @@
 package com.rack.proyecto1 //Indicar a que paquete pertenece el codigo (carpetas)
 
 import android.icu.text.DecimalFormat //Importar paquete externo
+import com.rack.proyecto1.consumoApi.ApiService
 import kotlinx.coroutines.*
 import kotlin.random.Random
 
@@ -187,6 +188,10 @@ fun main() {
     runBlocking { //Forma de llamar a una funcion asincrona que se ejecuta en un hilo aparte (por fuera del flujo principal) (se necesita llamar desde una corrutina y hay que importarlo)
         val resultadoTarde = async { funcionTardia("asdf") } //La funcion debe estar declarada como suspend
         println(resultadoTarde.await())
+    }
+    CoroutineScope(Dispatchers.IO).launch{ //Ejecuta una corrutina en el hilo especificado (para peticiones se suele usar el IO)
+        println("respuesta tardia")
+        //runOnUIThread { } //Si estuviese en una activity, para modificar la interfaz desde una corrutina habria que volver al hilo de la interfaz
     }
 
     val resultadoL: (Int, Int) -> Int = {a, b -> a + b} //Declarando una funcion lambda, devuelve lo que devuelva la expresion (se puede usar como entrada para funciones que pidan funciones)
