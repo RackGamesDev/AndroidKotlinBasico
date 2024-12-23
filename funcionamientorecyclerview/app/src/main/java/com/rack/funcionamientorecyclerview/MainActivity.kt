@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = manager
         recyclerView.adapter = CocheAdapter(CocheProvider.listaCoches, {coche -> onItemSelected(coche)})
         recyclerView.addItemDecoration(decoration)
+        //adapter.updateList(CocheProvider.listaCoches) //Si hubiese que actualizar la lista
     }
 
     fun onItemSelected(coche: Coche){ //Se llama cuando se hace click en un item, devuelve ese item

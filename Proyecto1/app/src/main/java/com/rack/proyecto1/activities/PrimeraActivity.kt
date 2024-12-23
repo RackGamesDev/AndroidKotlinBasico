@@ -65,6 +65,8 @@ class PrimeraActivity : AppCompatActivity() {
                     startActivity(Intent(this, ConBindingActivity::class.java))
                 } else if(textoo == "b"){
                     startActivity(Intent(this, UsoRetrofitActivity::class.java))
+                } else if(textoo == "c"){
+                    startActivity(Intent(this, ImagenesPicassoActivity::class.java))
                 }
             } else {
                 val intent = Intent(this, SegundaPantalla::class.java) //Declara un intent para pasar a otra pantalla

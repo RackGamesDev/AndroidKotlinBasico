@@ -20,7 +20,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" } #Tambien para retrofit2
+#retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" } #Tambien para retrofit2
 #retrofitconverter = { group = "com.square.retrofit2.converter", name = "retrofitconverter", version.ref = "retrofit"}
 #retrofitconvertergson = { group = "com.square.retrofit2:converter-gson", name = "retrofitconvertergson", version.ref = "retrofit"}
 

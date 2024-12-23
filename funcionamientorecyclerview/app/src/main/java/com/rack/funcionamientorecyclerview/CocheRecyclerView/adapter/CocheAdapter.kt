@@ -6,7 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rack.funcionamientorecyclerview.CocheRecyclerView.Coche
 import com.rack.funcionamientorecyclerview.R
 
-class CocheAdapter(private val listaCoches:List<Coche>, private val onClickListener:(Coche) -> Unit): RecyclerView.Adapter<CocheHolder>() {
+class CocheAdapter(private var listaCoches:List<Coche>, private val onClickListener:(Coche) -> Unit): RecyclerView.Adapter<CocheHolder>() {
+
+    fun updateList(list: List<Coche>){ //Actualizar la lista
+        listaCoches = list
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CocheHolder {
         val layoutInflater = LayoutInflater.from(parent.context) //Inflater que crea la vista de ese item
         return CocheHolder(layoutInflater.inflate(R.layout.item_coche, parent, false))

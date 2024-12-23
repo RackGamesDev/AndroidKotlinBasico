@@ -33,11 +33,13 @@ class UsoRetrofitActivity : AppCompatActivity() {
                     val objetoRespuesta: ItemDataResponse? = respuesta.body() //El body como json parseado a ItemDataResponse
                     if (objetoRespuesta != null){
                         Log.i("respuesta", objetoRespuesta.toString())
-                        if (objetoRespuesta.items.isNotEmpty()){
+                        if (objetoRespuesta.items != null && objetoRespuesta.items.isNotEmpty()){
                             Log.i("primer id", objetoRespuesta.items[0].itemId)
                             runOnUiThread{ //La interfaz no puede ser modificada desde otro hilo
                                 binding.texto.text = objetoRespuesta.items[0].itemId //Accediendo a una posicion del array que hay en el json de la respuesta
                             }
+                        } else {
+                            Log.i("respuesta", "vacio");
                         }
                     }
                 } else {
@@ -48,7 +50,6 @@ class UsoRetrofitActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
     private fun getRetrofit(baseUrl:String): Retrofit{ //Funcion que devuelve el objeto retrofit a partir de una url a la que hacer las peticiones
