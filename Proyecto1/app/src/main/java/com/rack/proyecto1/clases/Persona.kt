@@ -12,8 +12,9 @@ class Persona(nombre:String, var edad:Int, opcional:Int = 3) { //Creando una cla
         private set //Es publica pero el set para cambiarla no
     internal val varInterna = 0 //Propiedad/metodo que solo se puede usar en ese paquete
     companion object Compa { //Para agnadir funciones y constantes estaticas en clases normales
-        private val textoDefecto = "a"
+        private const val textoDefecto = "a"
         fun estatica(){println("a")} //Actuaria similar a una funcion estatica
+
     }
 
     fun decirNombre(){ //Funcion que se podra usar desde la instancia

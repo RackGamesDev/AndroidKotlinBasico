@@ -19,3 +19,8 @@ CheckBox: checkbox basico (se le agnade el evento como al boton y se sabe si est
 RadioGroup: contiene los RadioButton que tienen propiedades muy parecidas a CheckBox pero solo se puede seleccionar 1
 SearchView: tipico para introducir texto y buscar
 ProgressBar: circulo de carga de google que puede estar visible, no estarlo o directamente desaparecer
+SwitchMaterial: el tipico checkbox que se mueve a izquierda o derecha
+MaterialDivider: divisor simple a modo de linea
+
+
+

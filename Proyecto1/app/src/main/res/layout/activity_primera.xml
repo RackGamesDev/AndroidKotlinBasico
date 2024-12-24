@@ -169,6 +169,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton1" />
 
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/boton1"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        android:enabled="true"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busqueda"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
     <!--Layouts secundarios (se pueden meter dentro de otros):
     //FrameLayout(posicionar segun gravedad de cada item), LinearLayout(posicionar segun orientacion del frame)
     <TextView
@@ -182,15 +195,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="183dp"
+            android:layout_width="0dp"
             android:layout_height="38dp"
             android:text="hola"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:weight="1"/>
         <TextView
-            android:layout_width="183dp"
+            android:layout_width="0dp"
             android:layout_height="38dp"
             android:text="hola"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:weight="1"/>
     </LinearLayout>
     <FrameLayout
         android:layout_width="wrap_content"

@@ -9,4 +9,7 @@ import retrofit2.http.Path
 interface ApiService {
     @GET("/api/ac277525e043ec1f536e70a4fcb56d34/search/{name}") //La otra parte de la url, se pueden poner parametros
     suspend fun getItem(@Path("name") nombreItem: String): Response<ItemDataResponse>
+
+    @GET("/api/ac277525e043ec1f536e70a4fcb56d34/{id}")
+    suspend fun getByItem(@Path("id") idItem: String): Response<ItemDataResponse>
 }
