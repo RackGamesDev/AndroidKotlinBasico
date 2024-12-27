@@ -9,6 +9,8 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.rack.proyecto1.R
@@ -49,5 +51,8 @@ class DinamicoActivity : AppCompatActivity() {
 
         objetivo.removeView(texto1) //Para eliminar un elemento
 
+
+        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES) //Cambiar a modo oscuro o claro (de la carpeta themes)
+        delegate.applyDayNight()
     }
 }

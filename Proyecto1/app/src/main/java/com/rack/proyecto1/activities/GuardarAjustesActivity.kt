@@ -14,10 +14,14 @@ import androidx.datastore.preferences.preferencesDataStore
 import com.rack.proyecto1.databinding.ActivityImagenesPicassoBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
+
 //Para guardar ajustes en una mini-base de datos se usa un plugin de android llamado datastore
-val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings") //Esto es un singleton, crea una unica instancia de dataStore que seria la base de datos
+val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings") //Esto es un singleton, crea una unica instancia de dataStore que seria la base de datos (seria conveniente declararlo en un archivo aparte al inicio)
 
 class GuardarAjustesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGuardarAjustesBinding
@@ -26,8 +30,10 @@ class GuardarAjustesActivity : AppCompatActivity() {
         binding = ActivityGuardarAjustesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         CoroutineScope(Dispatchers.IO).launch { //Corrutina para llamar a las funciones que editan los datos
             editarDatos()
+            binding.texto.text = leerDatoString(dataStore, "valorstring") //Leer un valor del dataStore con la funcion de mas abajo
         }
     }
 
@@ -35,16 +41,18 @@ class GuardarAjustesActivity : AppCompatActivity() {
         dataStore.edit { //Editar en la mini-base de datos de ajustes
             it[booleanPreferencesKey("valorbool")] = true //Guardar un valor (dependiendo del tipo se usa una funcion u otra), valorbool es su nombre
             it[intPreferencesKey("valorint")] = 1
-            it[stringPreferencesKey("valorstring")] = "asdf"
+            it[stringPreferencesKey("valorstring")] = "adsa"
             it[doublePreferencesKey("valordouble")] = 1.2 //Los hay con todos los tipos primitivos
             it.remove(booleanPreferencesKey("valorbool")) //Eliminar un valor
             //it.clear() //Eliminar los registros
         }
     }
 
-    private fun getSettings(){
-        return dataStore.data.map {
-            it[intPreferencesKey("valorint")]
+    private suspend fun leerDatoString(dataStore: DataStore<Preferences>, clave:String):String{ //Funcion para sacar un valor (solamente string) del dataStore
+        val preferencesKey = stringPreferencesKey(clave)
+        val valueFlow: Flow<String?> = dataStore.data.map { preferences ->
+            preferences[preferencesKey]
         }
+        return valueFlow.first().orEmpty()
     }
 }

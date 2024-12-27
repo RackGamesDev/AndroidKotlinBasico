@@ -112,5 +112,8 @@ class PrimeraActivity : AppCompatActivity() {
             }
             dialogo.show() //Mostrarlo finalmente
         }
+
+
+
     }
 }

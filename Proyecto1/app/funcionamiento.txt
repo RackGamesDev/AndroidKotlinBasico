@@ -9,5 +9,6 @@ En /app/manifests/AndroidManifests.xml esta la informacion de la aplicacion y la
     Tambien se especifican las activitys secundarias y los temas, los temas son estilos por defecto para aplicar a las activitys (en res/values/themes)
     Se especifican los permisos, tanto normales como complejos
 En app/res/values hay xmls con variables globales como colores y textos para usar en los scripts
+    Tambien tiene la carpeta de temas, que pueden establecer valores por defecto a actividades, al igual que la version oscura con lo mismo pero con colores oscuros
 En app/res/drawable hay svg en formato xml para usar en la app (se pueden elegir predefinidos o .svg ya existente)
 Para activar el binding y evitar usar el findViewById hay que editar build.gradle.kts(Module:app) en vista android y sincronizar gradle
