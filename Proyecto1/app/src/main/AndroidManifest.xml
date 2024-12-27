@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Proyecto1"
         tools:targetApi="31">
         <activity
+            android:name=".activities.GuardarAjustesActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ImagenesPicassoActivity"
             android:exported="false" />
         <activity
