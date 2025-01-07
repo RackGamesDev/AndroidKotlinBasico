@@ -1,0 +1,5 @@
+com.rack.proyecto1.test.app-core-1.6.1-0 /home/yete/.gradle/caches/transforms-4/f1de0c4edc1152409866ec97a8de439c/transformed/core-1.6.1/res
+com.rack.proyecto1.test.app-androidTest-1 /home/yete/Escritorio/android/Proyecto1/app/build/generated/res/resValues/androidTest/debug
+com.rack.proyecto1.test.app-mergeDebugAndroidTestResources-2 /home/yete/Escritorio/android/Proyecto1/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.rack.proyecto1.test.app-mergeDebugAndroidTestResources-3 /home/yete/Escritorio/android/Proyecto1/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.rack.proyecto1.test.app-debugAndroidTest-4 /home/yete/Escritorio/android/Proyecto1/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

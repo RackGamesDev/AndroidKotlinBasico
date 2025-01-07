@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_imagenes_picasso.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_imagenes_picasso.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/dialogo_prueba.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/dialogo_prueba.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/objeto_renderizable.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/objeto_renderizable.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_uso_retrofit.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_uso_retrofit.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_dinamico.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_dinamico.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_con_binding.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_con_binding.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_segunda_pantalla.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_segunda_pantalla.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_guardar_ajustes.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_guardar_ajustes.xml"
+    },
+    {
+        "merged": "com.rack.proyecto1.app-mergeDebugResources-32:/layout/activity_primera.xml",
+        "source": "com.rack.proyecto1.app-main-35:/layout/activity_primera.xml"
+    }
+]
