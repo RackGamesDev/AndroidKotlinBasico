@@ -64,7 +64,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f0646a-a1ca-45fb-a44e-5439c4633eda" name="Changes" comment="a" />
+    <list default="true" id="d4f0646a-a1ca-45fb-a44e-5439c4633eda" name="Changes" comment="a">
+      <change afterPath="$PROJECT_DIR$/../fragmentos/.idea/studiobot.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,33 +174,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Android App.app.executor": "Run",
-    "Kotlin.CodigoPaqueteKt.executor": "Run",
-    "Kotlin.CosasKotlinKt.executor": "Run",
-    "Kotlin.PruebaKt.executor": "Run",
-    "Kotlin.UsoClasesKt.executor": "Run",
-    "ResourceManagerPrefKey.ResourceType": "DRAWABLE",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/yete/Escritorio/android/Proyecto1/app/src/main/res/layout",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.android.studio.ml.bot.mainConfigurable",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.CodigoPaqueteKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.CosasKotlinKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.PruebaKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.UsoClasesKt.executor&quot;: &quot;Run&quot;,
+    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/yete/Escritorio/android/Proyecto1/app/src/main/res/layout&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.android.studio.ml.bot.mainConfigurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="android.template.2141333766">
       <recent name="com.rack.proyecto1.activities" />

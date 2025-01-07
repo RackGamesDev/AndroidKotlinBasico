@@ -52,8 +52,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.squareup.retrofit2:retrofit:2.11.0") // Retrofit 9 (hacer peticiones y transformar las respuestas en objetos)
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0") // Gson Converter 9
+
+    val versionRetrofit = "2.11.0" //Se pueden hacer variables aqui
+
+    implementation("com.squareup.retrofit2:retrofit:$versionRetrofit") // Retrofit 9 (hacer peticiones y transformar las respuestas en objetos)
+    implementation("com.squareup.retrofit2:converter-gson:$versionRetrofit") // Gson Converter 9
     implementation("com.squareup.picasso:picasso:2.8") //Picasso (poner imagenes a partir de urls y cache)
     implementation("androidx.datastore:datastore-preferences:1.0.0") //Libreria para guardar ajustes en el dispositivo
 }
