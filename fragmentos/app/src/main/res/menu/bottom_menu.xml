@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/seccionUnoFragment"
+        android:title="uno"
+        android:icon="@drawable/baseline_arrow_circle_left_24"/>
+    <item
+        android:id="@+id/seccionDosFragment"
+        android:title="dos"
+        android:icon="@drawable/baseline_arrow_circle_up_24"/>
+    <item
+        android:id="@+id/seccionTresFragment"
+        android:title="tres"
+        android:icon="@drawable/baseline_arrow_circle_right_24"/>
+
+</menu>

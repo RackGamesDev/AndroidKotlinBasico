@@ -21,9 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <fragment android:name=".ui.SeccionUnoFragment" />
+        <!--<fragment android:name=".ui.SeccionUnoFragment" />
         <fragment android:name=".ui.SeccionDosFragment" />
-        <fragment android:name=".ui.SeccionTresFragment" />
+        <fragment android:name=".ui.SeccionTresFragment" />-->
+
     </application>
 
 </manifest>

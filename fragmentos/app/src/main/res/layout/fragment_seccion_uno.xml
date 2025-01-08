@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SeccionUnoFragment">
+    tools:context=".ui.SeccionUnoFragment"
+    android:background="@color/rojo">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--Este es el contenido del fragment, funciona igual que una view normal-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="fragmento numero uno"
+        android:textSize="30sp"/>
 
 </FrameLayout>
