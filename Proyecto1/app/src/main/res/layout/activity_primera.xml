@@ -32,7 +32,8 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="20dp"
-            android:text="@string/app_name" />
+            android:text="@string/app_name"
+            android:fontFamily="@font/fuente"/>
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
