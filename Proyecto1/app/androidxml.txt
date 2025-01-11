@@ -4,6 +4,7 @@ android:layout_width="wrap_content" (ocupa lo que haga falta) "match_parent" (lo
 Unidades de medida: dp=para pantallas sp=fuentes
 Poniendo algo como tools: en lugar de android: hace que solo se vea asi en la preview
 Para agregar librerias externas (como retrofit) hay que agregarlas en libs.versions.toml y luego en build.gradle.kts(Module:app) y luego recargar el proyecto y sincronizar gradle
+Para usar valores por defecto de otros elementos se puede poner "?attr/propiedad"
 
 Elementos (algunos vienen importados de librerias):
 FrameLayout, LinearLayout, ConstraintLayout (conener items)

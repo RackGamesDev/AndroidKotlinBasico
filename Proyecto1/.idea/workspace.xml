@@ -65,20 +65,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4f0646a-a1ca-45fb-a44e-5439c4633eda" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/../fragmentos/.idea/studiobot.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/color/algun_item_selector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fragmentos/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fragmentos/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../funcionamientorecyclerview/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/androidxml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/androidxml.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_primera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_primera.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/java/com/rack/fragmentos/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/java/com/rack/fragmentos/ui/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/menu/bottom_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/navigation/main_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/navigation/main_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fragmentos/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +135,7 @@
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Este archivo define la logica y el contenido de un menu, que en este caso estara en la parte de abajo-->
     <item
         android:id="@+id/seccionUnoFragment"
         android:title="uno"

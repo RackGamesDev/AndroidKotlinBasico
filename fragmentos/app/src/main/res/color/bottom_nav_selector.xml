@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Crear un selector es como crear un valor (por ejemplo un color) que cambia dependiendo del estado del item al que se ponga-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/rojo" android:state_checked="true"/> <!--Solo se pondra este color cuando ese item este seleccionado-->
+    <item android:color="@color/purple_200"/>
+</selector>

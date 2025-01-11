@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="contenido de toolbar"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <!--Aqui aparecera el contenido del fragment, para saber como tiene que actuar tiene que ir adherido a un navigationgraph.xml-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         app:defaultNavHost="true"
@@ -17,8 +33,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
 
+    <!--Un menu cuyos contenidos vienen de el bottom_menu.xml-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="0dp"
@@ -26,5 +43,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/bottom_menu"/>
+        app:menu="@menu/bottom_menu"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"/><!--Usando un selector, por lo que su color cambiara dependiendo de su estado-->
 </androidx.constraintlayout.widget.ConstraintLayout>

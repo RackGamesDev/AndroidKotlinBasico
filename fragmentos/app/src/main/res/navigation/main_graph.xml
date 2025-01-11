@@ -5,6 +5,8 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/seccionUnoFragment">
 
+    <!--Aqui tiene que estar la activity principal y los fragments-->
+
     <activity
         android:id="@+id/mainActivity"
         android:name="com.rack.fragmentos.ui.MainActivity"
