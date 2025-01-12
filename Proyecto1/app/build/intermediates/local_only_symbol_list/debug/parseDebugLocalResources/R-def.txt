@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+color algun_item_selector
 color black
 color gray
 color purple_200
@@ -11,6 +12,7 @@ color white
 drawable ic_android_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+font fuente
 id aceptarDialogo1
 id aplicacion
 id boton
